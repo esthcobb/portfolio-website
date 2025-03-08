@@ -1,79 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-   <title>Responsive Portfolio Website</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio Web Design</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="./scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="icon" type="image/jpg" href="./images/favicon-32X32.png">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="links">
-                <a href="#home">Home</a>
-                <a href="about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#blog">Blog</a> 
-            </div>
-            <div class="social links">
-                <div class="github">
-                    <i class="fa-brands fa-github"></i>
-                    <label for="">Github</label>
-                </div>
-                <div class="gmail">
-                    <i class="fa-solid fa-envelope"></i>
-                    <label for="">Email</label>
-                </div>
-            </div>
-            <div>
-                <i class="fa-solid fa-bars" onclick="hamburg()"></i>
-            </div>
-            <div class="sidebar">
-                <div class="links">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Blog</a>  
-                    <i class="fa-solid fa-xmark" onclick="cancel()"></i>
-                </div>          
-            </div>
+	<header>
+		<a href="#" class="logo-holder">
+			<div class="logo">E</div>
+			<div class="logo-text">Esther</div>
+		</a>
+		<nav>
+			<ul id="menu">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#projects">Projects</a>
+				</li>
+				<li>
+					<a href="#skills">Skills</a>
+				</li>
+                <li>
+                    <a href="#blog">Blog</a>
+                </li>
+			</ul>
+			<a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+				<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+					<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+				</svg>
+			</a>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <i class="fa fa-bars"></i> 
+            </button>            
+		</nav>
+	</header>
+	<main>
+		<section class="hero container">
+			<div class="hero-blue">
+				<div>
+					<h1><small>Hi I'm</small>
+						Esther Cobbina
+					</h1>
+					<p>
+						Computer Student and self-taught coder based in Frankfurt, Germany. 
+                        I built this website to showcase my skills 
+                        and I'm constantly learning and improving. Currently, I’m working on several backend projects, diving into web development,
+                        and exploring databases and APIs. I’m looking for internships and working student
+                        positions where I can collaborate with others, contribute to meaningful projects, and continue growing as a developer.
+					</p>
+                    <div class="call-to-action">
+                        <a href="mailto:esthercobbina7@gmail.com" class="button">
+                            <i class="fa-solid fa-envelope"></i> Contact Me
+                        </a>
+                        <a href="https://github.com/esthcobb" class="button">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+				</div>
+			</div>
+           
+		</section>
 
-        </nav>
-    </header>
+		<section id="skills" class="skills container">
+			<h2>
+				<small>Technical</small>
+				Skills
+			</h2>
+			<div class="holder-blue">
+                <div class="left-column">
+				<h3>Languages</h3>
+                <ul>
+                    <li>Python</li>
+                   <li>JavaScript</li>
+                 <li>C/C++</li>
+               </ul>
 
-    <section>
-        <div class="main-container">
-            <div class="image">
-                <img src ="main.jpg" alt="">
-            </div>
-            <div class="content">
-                <h1 data-aos="fade left">
-                     I'm
-                    <span>Esther Cobbina</span>
-                </h1>
-                <div class="typewriter">
-                    I'm a 
-                    <span class="typewriter text"></span>
-                    <label for=""></label>
-                </div>
-            </div>
+             <h3>Frameworks & Technologies</h3>
+             <ul>
+              <li>React</li>
+             <li>Flask</li>
+            <li>Express.js</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+    </ul>
+
+    <h3>Tools</h3>
+    <ul>
+        <li>Git</li>
+        <li>Docker</li>
+        <li>CI/CD (GitHub Actions)</li>
+        <li>Shell</li>
+    </ul>
+				</div>
+				
+				<div class="right-column">
+					<h3>Selected Coursework </h3>
+            <p>
+                Throughout my education and self-learning, I have gained a strong foundation in various topics 
+                that form the core of modern software development. These include:
+            </p>
+            <ul>
+                <li>Algorithms and Data Structures</li>
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>Databases (SQL & NoSQL)</li>
+                <li>Machine Learning (ML) and Artificial Intelligence (AI)</li>
+                <li>Web Development and Design Principles</li>
+                <li>Software Engineering Best Practices</li>
+            </ul>
+            <p>
+                I am continually expanding my expertise in these areas through hands-on projects and coursework. 
+                My focus is on building efficient, scalable systems with a strong emphasis on clean, maintainable code.
+            </p>
+				</div>
+			</div>
+		</section>
+		
+			
+    <section id="projects" class="projects container">
+        <h2>
+            <small>Recent</small>
+            Projects
+        </h2>
+        <div class="projects-list">
+            <article>
+                <h3>Personal Portfolio Website </h3>
+                <p>I demonstrated my understanding on the fundamentals of resposnive  web development using HTML, CSS, and JavaScript.</p>
+                <!-- GitHub and Live Demo buttons -->
+                <a href="https://github.com/yourusername/project1" target="_blank" class="btn"> 
+                <i class="fa-brands fa-github"></i> Github Repo
+                </a>
+                <a href="https://yourlivedemo.com" target="_blank" class="btn">
+                <i class="fa solid fa-globe"></i> Live Demo
+                </a>
+            </article>
+            <article>
+                <h3>Backend Project</h3>
+                <p>In progress, building a robust server side application using with NodeJS, ExpressJs and Docker.</p>
+                <a href="https://github.com/yourusername/project2" target="_blank" class="btn">
+                <i class="fa-brands fa-github"></i> Github Repo
+                </a>
+                <a href="https://yourlivedemo.com" target="_blank" class="btn">
+                <i class="fa solid fa-globe"></i> Live Demo
+                </a>           
+            </article>
+            <article>
+                <h3>API Development </h3>
+                <p>In Progress, building my own Python API with Authentication, CRUD Operation, 
+                    Validation and Documentation and SQL Databases
+                    from scratch</p>
+                <a href="https://github.com/yourusername/project2" target="_blank" class="btn">
+                <i class="fa-brands fa-github"></i> Github Repo
+                </a>
+                <a href="https://yourlivedemo.com" target="_blank" class="btn">
+                <i class="fa solid fa-globe"></i> Live Demo
+                </a>   
+            </article>
         </div>
-<!---About section start-->
     </section>
     
-    
-
-    </section>
-
-<!---Projects section start-->
-     <section>
-
-     </section>
-
-<!---Blog section start-->
-<section>
-
-</section>   
+        <section class="work-experience container">
+			<h2>
+				<small></small>
+				Experience
+			</h2>
+			<div class="work">
+				<article>
+                    <h3>Job role 1</h3>
+                    <div>2020-current</div>
+                    <p>Created a series of tutorials teaching web development using HTML, CSS, and JavaScript.</p>		
+				</article>	    
+			</div>
+		</section>
+       
+        
+        <section id="blog" class="blog container">
+            <h2><small>Latest</small> Blog Posts</h2>
+            <div class="blog-posts">
+                <article>
+                    <h3><a href="blog.html?post=1">API implementation</a></h3>
+                    <div>March 5, 2025</div>
+                    <p>An introductory guide to Postman...</p>
+                </article>
+                
+                <article>
+                    <h3><a href="blog.html?post=2">Tokenization Process in Pre-training of LLMs</a></h3>
+                    <div>February 15, 2025</div>
+                    <p>Coming soon!This post covers ...</p>
+                </article>
+                
+                <article>
+                    <h3><a href="blog.html?post=3">JS, React</a></h3>
+                    <div>January 30, 2025</div>
+                    <p>Coming soon!Learn the fundamentals of JavaScript...</p>
+                </article>
+                
+            </div>
+        </section>
+	</main>
 </body>
 </html>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
