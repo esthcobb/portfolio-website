@@ -8,11 +8,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
-	<script src="./scripts.js"></script>
+	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="icon" type="image/png" href="./images/favicon-32X32.png">
+	<link rel="icon" type="image/png" href="images/favicon-32X32.png">
 </head>
 <body>
+    <div id="google_translate_element"></div>
+
 	<header>
 		<a href="#" class="logo-holder">
 			<div class="logo">E</div>
@@ -32,6 +34,7 @@
                 <li>
                     <a href="#blog">Blog</a>
                 </li>
+ 
 			</ul>
 			<a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
 				<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -40,7 +43,8 @@
 			</a>
             <button class="mobile-toggle" onclick="toggleMobileMenu()">
                 <i class="fa fa-bars"></i> 
-            </button>            
+            </button>   
+                     
 		</nav>
 	</header>
 	<main>
@@ -58,7 +62,7 @@
                         positions where I can collaborate with others, contribute to meaningful projects, and continue growing as a developer.
 					</p>
                     <div class="call-to-action">
-                        <a href="mailto:esthercobbina7@gmail.com" class="button">
+                        <a href="#contact" class="button">
                             <i class="fa-solid fa-envelope"></i> Contact Me
                         </a>
                         <a href="https://esthcobb.github.io/portfolio-website/#projects" class="button">
@@ -188,9 +192,35 @@
 				</article>	    
 			</div>
 		</section>
+
+        <section id="contact" class="contact container">
+            <h2>
+                <small></small>
+                Contact Me
+            </h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </section>
+        
+        <div id="google_translate_element"></div>
+
+
        
         
-        <section id="blog" class="blog container">
+      <!--- <section id="blog" class="blog container">
             <h2><small>Latest</small> Blog Posts</h2>
             <div class="blog-posts">
                 <article>
@@ -212,8 +242,10 @@
                 </article>
                 
             </div>
-        </section>
+        </section>--->
+
 	</main>
+    <script src="script.js"></script>
 </body>
 </html>
 
